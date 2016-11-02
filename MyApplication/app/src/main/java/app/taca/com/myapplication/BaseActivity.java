@@ -20,5 +20,6 @@ public class BaseActivity extends AppCompatActivity {
         if(pd != null && pd.isShowing()){
             pd.dismiss();
         }
+
     }
 }

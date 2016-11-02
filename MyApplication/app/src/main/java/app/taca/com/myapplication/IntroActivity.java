@@ -83,7 +83,10 @@ public class IntroActivity extends BaseActivity
                                         .show();
                                 return;
                             }
-                            Log.i("NET", "로그인");
+                            //Log.i("NET", "로그인");
+                            Intent i = new Intent(IntroActivity.this, RegistActivity.class);
+                            startActivity(i);
+                            finish();
                         }catch(Exception e){
                             // 실패 전문
                             ResError err = gson.fromJson(response, ResError.class);
