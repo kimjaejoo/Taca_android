@@ -13,5 +13,7 @@ public class E {
     public static class API {
         public static String API_MAIN       = "main.jsp";
         public static String API_VERSION    = "version.jsp";
+        public static String API_REGIST     = "regist";
+        public static String API_LOGIN      = "login";
     }
 }

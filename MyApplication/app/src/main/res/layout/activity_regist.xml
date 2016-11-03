@@ -46,6 +46,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button"
-            android:onClick="onRegist (RegistActivity)" />
+            android:onClick="onRegist" />
     </LinearLayout>
 </RelativeLayout>
