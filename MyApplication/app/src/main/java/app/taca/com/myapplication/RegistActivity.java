@@ -21,6 +21,12 @@ public class RegistActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // 회원 정보가 저장되어 있으면 자동 로그인
+        if( !U.getInstance().getStoreString(this, "uid").equals("") &&
+                !U.getInstance().getStoreString(this, "upw").equals("") ){
+            onLogin(U.getInstance().getStoreString(this, "uid"), U.getInstance().getStoreString(this, "upw"));
+        }
+
         setContentView(R.layout.activity_regist);
         uid = (EditText) this.findViewById(R.id.uid);
         name = (EditText) this.findViewById(R.id.name);
@@ -119,8 +125,9 @@ public class RegistActivity extends BaseActivity {
                         ResRegistDto res = gson.fromJson(response.toString(), ResRegistDto.class);
                         if (res.getCode() == 1) {
                             Toast.makeText(RegistActivity.this, "로그인 되었습니다.", Toast.LENGTH_SHORT).show();
+                            // 로그인 정보 저장
                             U.getInstance().setStoreString(RegistActivity.this, "uid", uid);
-                            U.getInstance().setStoreString(RegistActivity.this, "upw" , upw);
+                            U.getInstance().setStoreString(RegistActivity.this, "upw", upw);
 
                             Intent i = new Intent(RegistActivity.this, ServiceActivity.class);
                             startActivity(i);
@@ -139,3 +146,4 @@ public class RegistActivity extends BaseActivity {
         U.getInstance().getQueue(this).add(req);
     }
 }
+

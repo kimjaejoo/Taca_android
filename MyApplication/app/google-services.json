@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "96004368873",
+    "firebase_url": "https://pushtest-9f627.firebaseio.com",
+    "project_id": "pushtest-9f627",
+    "storage_bucket": "pushtest-9f627.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96004368873:android:84017d11b7c862aa",
+        "android_client_info": {
+          "package_name": "app.taca.com.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "96004368873-jm94eka27e6u2tqe2bv9r0pdprgvkjcj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt2t3U4X5RX5_hyF5cNeTPp2XsmNszl8I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

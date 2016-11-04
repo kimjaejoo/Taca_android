@@ -26,13 +26,18 @@ public class U {
         return queue;
     }
 
+    // 아이디 비번등 데이터 저장
     String STORE_NAME = "perf";
-    public void setStoreString(Context context, String key, String value){
+    public void setStoreString(Context context, String key, String value)
+    {
         SharedPreferences.Editor editor = context.getSharedPreferences(STORE_NAME, 0).edit();
         editor.putString(key, value);
         editor.commit();
     }
-    public String getStoreString(Context context , String key){
+    public String getStoreString(Context context, String key)
+    {
         return context.getSharedPreferences(STORE_NAME, 0).getString(key, "");
     }
+
 }
+

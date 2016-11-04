@@ -12,6 +12,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.gson.Gson;
 
 import java.util.HashMap;
@@ -30,6 +31,11 @@ public class IntroActivity extends BaseActivity
         setContentView(R.layout.activity_intro);
         // 버전체크 !!
         // 동일 버전이면 그대로 서비스, 버전이 다르면 업데이트 창 띠운다 !!
+
+        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+        if(refreshedToken != null) {
+            Log.d("NET", "Refreshed token: " + refreshedToken);
+        }
         showLoading();
         onVersion();
     }
@@ -118,5 +124,4 @@ public class IntroActivity extends BaseActivity
 
 
 }
-
 
